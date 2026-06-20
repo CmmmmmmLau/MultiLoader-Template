@@ -45,6 +45,17 @@ gradle.beforeProject { project ->
                 includeGroup "curse.maven"
             }
         }
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = 'ParchmentMC'
+                    url = uri('https://maven.parchmentmc.org')
+                }
+            }
+            filter {
+                includeGroup('org.parchmentmc.data')
+            }
+        }
     }
 }
 
