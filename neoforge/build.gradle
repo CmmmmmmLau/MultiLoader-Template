@@ -3,6 +3,10 @@ plugins {
     id 'net.neoforged.moddev'
 }
 
+dependencies {
+    implementation("curse.maven:jei-238222:7420587")
+}
+
 neoForge {
     def currentModId = providers.gradleProperty('mod_id').get()
     def currentProjectPath = project.path
