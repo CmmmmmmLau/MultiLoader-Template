@@ -24,6 +24,11 @@ neoForge {
         accessTransformers.from(at.absolutePath)
     }
 
+    parchment {
+        minecraftVersion = "${minecraft_version}"
+        mappingsVersion = "${parchment_version}"
+    }
+
     runs {
         configureEach {
             systemProperty(

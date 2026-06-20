@@ -4,13 +4,10 @@ plugins {
 }
 
 dependencies {
-    def parchmentMinecraftVersion = providers.gradleProperty("neoForge.parchment.minecraftVersion").get()
-    def parchmentMappingsVersion = providers.gradleProperty("neoForge.parchment.mappingsVersion").get()
-
     minecraft("com.mojang:minecraft:${minecraft_version}")
     mappings loom.layered() {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${parchmentMinecraftVersion}:${parchmentMappingsVersion}@zip")
+        parchment("org.parchmentmc.data:parchment-${minecraft_version}:${parchment_version}@zip")
     }
     modImplementation("net.fabricmc:fabric-loader:${fabric_loader_version}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_version}")
