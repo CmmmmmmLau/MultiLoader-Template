@@ -15,6 +15,6 @@ public class MixinMinecraft {
     private void init(CallbackInfo info) {
 
         Constants.LOG.info("This line is printed by an example mod common mixin!");
-        Constants.LOG.info("MC Version: {}", SharedConstants.getCurrentVersion().name());
+        Constants.LOG.info("MC Version: {}", SharedConstants.getCurrentVersion().getName());
     }
 }
